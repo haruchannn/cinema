@@ -3,7 +3,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Practice;
+use App\Models\Practice;
 
 class PracticeController extends Controller
 {
