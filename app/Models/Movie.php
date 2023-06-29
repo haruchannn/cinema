@@ -11,6 +11,7 @@ class Movie extends Model
     use HasFactory;
 
     protected $table = 'movies';
+    protected $fillable = ['title', 'image_url', 'published_year', 'is_showing', 'description'];
 
     public function getData()
     {
