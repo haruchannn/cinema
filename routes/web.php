@@ -25,7 +25,11 @@ Route::get('/practice', [PracticeController::class, 'sample']);
 Route::get('/practice2', [PracticeController::class, 'sample2']);
 Route::get('/practice3', [PracticeController::class, 'sample3']);
 Route::get('/getPractice', [PracticeController::class, 'getPractice']);
+
 Route::get('/movies', 'App\Http\Controllers\MovieController@index');
+
 Route::get('/admin/movies', 'App\Http\Controllers\MovieController@admin');
 Route::get('/admin/movies/create', 'App\Http\Controllers\MovieController@admin_create_get');
 Route::post('/admin/movies/store', 'App\Http\Controllers\MovieController@admin_create_post');
+Route::get('/admin/movies/{id}/edit/', 'App\Http\Controllers\MovieController@edit')->where('id', '[0-9]+')->name('edit');
+Route::patch('/admin/movies/{id}/update/', 'App\Http\Controllers\MovieController@update')->where('id', '[0-9]+')->name('update');
